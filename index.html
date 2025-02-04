@@ -9,26 +9,31 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <link rel="stylesheet" href="main.css">
         
+        
     </head>
     <body>
         <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
             <div class="container">
                 <div class="navbar-brand">
-                    <img src="innovative.ay Logo.png" style="width: 9em; ">
-                    <a class="navbar-item" href=""><i class="fak fa-mf-logo has-text-primary fa-4x"></i></a>
-                    <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="#navMenu">
+                    <a class="navbar-item" href="/">
+                        <!-- Logo is here -->
+                    </a>
+        
+                    <!-- Burger menu button -->
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </a>
-                    
                 </div>
+        
+                <!-- Navigation links -->
                 <div class="navbar-menu is-shadowless" id="navMenu">
                     <div class="navbar-start"></div>
                     <div class="navbar-end">
                         <a class="navbar-item has-text-weight-normal" href="#home">Home</a>
                         <a class="navbar-item has-text-weight-normal" href="#about">About</a>
-                        <a class="navbar-item has-text-weight-normal" href="#Acheivement">Acheivement</a>
+                        <a class="navbar-item has-text-weight-normal" href="#Acheivement">Achievement</a>
                         <a class="navbar-item has-text-weight-normal" href="#Projects">Projects</a>
                         <div class="navbar-item">
                             <a class="button is-primary is-outlined is-rounded has-text-weight-normal"
@@ -39,7 +44,22 @@
                     </div>
                 </div>
             </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    // Get the burger button and navbar menu
+                    const burger = document.querySelector(".navbar-burger");
+                    const menu = document.querySelector("#navMenu");
+                
+                    // Add event listener for click
+                    burger.addEventListener("click", function () {
+                        burger.classList.toggle("is-active");
+                        menu.classList.toggle("is-active");
+                    });
+                });
+                </script>
+                
         </nav>
+        
         
         <section id="home" class="hero is-white has-text-centered">
             <div class="hero-body">

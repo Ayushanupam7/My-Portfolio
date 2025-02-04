@@ -13465,9 +13465,9 @@ hr {
 .avatar {
     margin: 2rem 0;
     /* width: 150px; */
-    width: 350px;
+    width: 220px;
     /* Set the width */
-    height: 350px;
+    height: 220px;
     /* Set the height to be the same as the width */
     object-fit: cover;
     /* Ensures the image covers the area without distortion */
@@ -13481,11 +13481,26 @@ hr {
 }
 
 
-@media screen and (min-width: 769px) {
+/* Adjust size for tablets */
+@media (max-width: 768px) {
     .avatar {
-        width: 350px;
+        width: 200px;
+        height: 200px;
     }
 }
+
+/* Adjust size for mobile devices */
+@media (max-width: 480px) {
+    .avatar {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+
+
+
 
 
 /* Border animation */
