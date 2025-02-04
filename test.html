@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Picture with Animated Border</title>
+    <style>
+        /* Centering the image and the container */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            background-color: #f4f4f4;
+        }
+
+        /* Profile image container with border */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Circle shape */
+            border: 5px solid transparent; /* Default transparent border */
+            position: relative;
+            overflow: hidden;
+            animation: border-animation 2s infinite; /* Animation on border */
+        }
+
+        /* Profile image styling */
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the circle */
+        }
+
+        /* Border animation */
+        @keyframes border-animation {
+            0% {
+                border-color: #3498db;
+                transform: rotate(0deg); /* Optional: adds rotating effect */
+            }
+            50% {
+                border-color: #e74c3c;
+                transform: rotate(180deg); /* Optional: adds rotating effect */
+            }
+            100% {
+                border-color: #3498db;
+                transform: rotate(360deg); /* Optional: adds rotating effect */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Profile picture container -->
+    <div class="profile-container">
+        <div class="profile-pic">
+            <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Profile Picture">
+        </div>
+    </div>
+
+</body>
+</html>

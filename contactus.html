@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Inquiry ~ Ayushanupam7 </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="contactus.css">
+    </head>
+<body>
+        <nav class="navbar is-transparent is-planner animate-fadeDown">
+            <div class="container">
+                <div class="navbar-brand"><a class="navbar-item" href="/"><img src="innovative.ay Logo.png" style="width:auto"></a></div>
+                <div class="navbar-menu" id="navMenu">
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <p class="buttons">
+                                <button type="button" id="reset" class="button is-medium tooltip is-tooltip-bottom"
+                                    data-tooltip="Reset" onclick="resetForm();">
+                                    <span class="icon is-small"><i class="fas fa-undo-alt"></i><img src=""</span> Reset
+                                </button>
+                                <a class="button is-medium tooltip is-tooltip-bottom" data-tooltip="Close" href="index.html">
+                                    Close<span class="icon is-small"><i class="fas fa-times"></i></span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="is-form-page animate-fadeUp">
+            <section class="is-white has-text-centered">
+                <div class="container">
+                    <div class="columns is-centered">
+                        <div class="column is-8">
+                            <img class="avatar" style="position: absolute; top: 50%; left: 50%; width: 100px; height: 100px; background-color: #6E07F3; border-radius: 50%; transform: translate(-50%, -50%);" src="Avatar.jpg.png">
+                            <h1 style="margin-top: 170px;" class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Want to discuss a startup collaboration? I'm most definitely game.</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="is-white">
+                <div class="container">
+                    <form id="form" action="mailto:Ayushanupam@gmail.com" method="POST" enctype="multipart/form-data" onsubmit="return showThankYouPage()">
+                        <div class="columns is-centered">
+                            <div class="column is-half">
+                                <div class="field">
+                                    <label class="label">Name</label>
+                                    <div class="control is-expanded">
+                                        <input class="input is-large" name="name" type="text" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-half">
+                                <div class="field">
+                                    <label class="label">Email</label>
+                                    <div class="control is-expanded">
+                                        <input class="input is-large" name="email" type="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns is-centered">
+                            <div class="column is-half">
+                                <div class="field">
+                                    <label class="label">Which project?</label>
+                                    <div class="control is-expanded">
+                                        <div class="select is-fullwidth">
+                                            <select class="is-large" name="project" required>
+                                                <option value="0" disabled selected hidden> </option>
+                                                <option>Basin</option>
+                                                <option>YL Builders</option>
+                                                <option>Houston</option>
+                                                <option>New Product</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-half">
+                                <div class="field">
+                                    <label class="label">Your interest</label>
+                                    <div class="control is-expanded">
+                                        <div class="select is-fullwidth">
+                                            <select class="is-large" name="role" required>
+                                                <option value="0" disabled selected hidden> </option>
+                                                <option>Collaborator</option>
+                                                <option>Investor</option>
+                                                <option>Co-founder</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns is-centered">
+                            <div class="column">
+                                <div class="field">
+                                    <label class="label">Additional details</label>
+                                    <div class="control is-expanded">
+                                        <textarea class="textarea is-large" name="message" rows="5" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="field is-hidden">
+                                    <label class="is-hidden"></label>
+                                    <div class="control is-expanded is-hidden">
+                                        <input class="is-hidden" name="_gotcha" type="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns is-centered">
+                            <div class="column is-one-third">
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-primary is-outlined is-medium is-fullwidth is-rounded" type="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <script>
+            function resetForm() {
+                document.getElementById('form').reset();
+            }
+
+            function showThankYouPage() {
+                // Prevent the default form submission behavior
+                event.preventDefault();
+
+                // Redirect to the "Thank You" page
+                window.location.href = 'thankyou.html';
+                return false;
+            }
+        </script>
+    </body>
+</html>
